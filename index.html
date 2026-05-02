@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zachary Foerst — Developer</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0a0a0f;
+    color: #c8c8d4;
+    font-family: 'Georgia', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  .container { max-width: 600px; width: 100%; text-align: center; }
+  h1 {
+    font-size: 2rem;
+    color: #e8c547;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    text-shadow: 0 0 30px rgba(232,197,71,0.3);
+  }
+  .subtitle {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #555566;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+  .apps { display: flex; flex-direction: column; gap: 20px; margin-bottom: 60px; }
+  .app-card {
+    background: #111118;
+    border: 1px solid #1e1e2e;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    transition: border-color 0.2s;
+  }
+  .app-card:hover { border-color: #e8c547; }
+  .app-icon {
+    width: 64px; height: 64px;
+    background: #1a1508;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px;
+    border: 1px solid #e8c547;
+    flex-shrink: 0;
+  }
+  .app-info h2 { font-size: 1.1rem; color: #e8c547; margin-bottom: 4px; }
+  .app-info p { font-family: 'Courier New', monospace; font-size: 0.7rem; color: #555566; line-height: 1.5; }
+  .app-links { margin-top: 8px; display: flex; gap: 12px; }
+  .app-links a {
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    color: #888899;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #1e1e2e;
+    padding-bottom: 1px;
+  }
+  .app-links a:hover { color: #e8c547; border-color: #e8c547; }
+  footer {
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    color: #333344;
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Zachary Foerst</h1>
+  <p class="subtitle">iOS Developer</p>
+
+  <div class="apps">
+    <div class="app-card">
+      <div class="app-icon">🍪</div>
+      <div class="app-info">
+        <h2>Cookie Void</h2>
+        <p>A dark, minimalist idle clicker game. Tap cookies, unlock upgrades, prestige, and compete on global leaderboards.</p>
+        <div class="app-links">
+          <a href="/cookievoid/support.html">Support</a>
+          <a href="/cookievoid/privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-card">
+      <div class="app-icon">⏱️</div>
+      <div class="app-info">
+        <h2>Ro</h2>
+        <p>A minimal focus timer built for deep work. Customizable sessions, ambient sounds, and distraction-free design.</p>
+        <div class="app-links">
+          <a href="/ro/support.html">Support</a>
+          <a href="/ro/privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-card">
+      <div class="app-icon">🗺️</div>
+      <div class="app-info">
+        <h2>Chronicle</h2>
+        <p>A beautiful itinerary planner for travelers. Build day-by-day trip plans, organize destinations, and travel with confidence.</p>
+        <div class="app-links">
+          <a href="/chronicle/support.html">Support</a>
+          <a href="/chronicle/privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2026 Zachary Foerst · All rights reserved</footer>
+</div>
+</body>
+</html>
