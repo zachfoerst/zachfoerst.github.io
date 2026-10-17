@@ -39,8 +39,9 @@
 
 <h1>Striae Support</h1>
 <p>Striae is a music player for your own media server — Plex, Jellyfin, and
-Subsonic-compatible servers like Navidrome — for iPhone, iPad, CarPlay, and
-Apple Watch.</p>
+Subsonic-compatible servers like Navidrome — for iPhone, iPad, CarPlay, Apple
+Watch, and Android. On Android it can also play music stored on your device or
+SD card, no server needed.</p>
 
 <div class="contact">
   Need help or found a bug? Email
@@ -51,27 +52,32 @@ Apple Watch.</p>
 
 <h2>Getting started</h2>
 <p>
-  Striae needs a media server with a music library. On first launch, pick your
-  server type and sign in:
+  Striae needs a media server with a music library (or, on Android, music on your
+  device). On first launch, pick your server type and sign in:
 </p>
 <ul>
-  <li><strong>Plex</strong> — sign in with the PIN link code shown in the app.
-      Your servers and music libraries are discovered automatically.</li>
+  <li><strong>Plex</strong> — on iPhone and iPad, sign in with the PIN link code
+      shown in the app; on Android, the app opens plex.tv in your browser to sign
+      in. Your servers and music libraries are discovered automatically.</li>
   <li><strong>Jellyfin</strong> — enter your server's address (for example
       <code>https://jellyfin.example.com</code>) plus your username and password.</li>
   <li><strong>Subsonic / Navidrome</strong> — enter your server address, username,
       and password, the same details you use in the web interface.</li>
+  <li><strong>Local Device</strong> (Android) — choose <em>Use Default
+      Storage</em> to play everything Android has indexed, or <em>Select SD Card /
+      Custom Folder</em> to pick the folder your music lives in.</li>
 </ul>
 <p>You can connect one account per service and switch between them in Settings.</p>
 
 <h2>Frequently asked questions</h2>
 
 <h3>The app can't reach my server</h3>
-<p>Check the address works in Safari on the same device first. If your server is
-only reachable at home, make sure you're on the same network or have remote access
-configured on the server (Plex remote access, or a reverse proxy / VPN for
-Jellyfin and Subsonic). If you use HTTPS with a self-signed certificate, iOS may
-refuse the connection — a certificate from Let's Encrypt fixes that.</p>
+<p>Check the address works in your browser (Safari, Chrome) on the same device
+first. If your server is only reachable at home, make sure you're on the same
+network or have remote access configured on the server (Plex remote access, or a
+reverse proxy / VPN for Jellyfin and Subsonic). If you use HTTPS with a
+self-signed certificate, iOS and Android may refuse the connection — a certificate
+from Let's Encrypt fixes that.</p>
 
 <h3>Playback stops when I leave home / switch networks</h3>
 <p>Striae automatically re-probes your server's connections when the network
@@ -79,7 +85,7 @@ changes and resumes where it left off. If a track still fails, pause and play
 again — and if it keeps happening, email me with your setup details.</p>
 
 <h3>How do offline downloads work?</h3>
-<p>Tap the download button on an album or track. Downloaded music appears in the
+<p>Offline downloads are on iPhone and iPad for now. Tap the download button on an album or track. Downloaded music appears in the
 Downloads section and plays without any connection — including in Airplane Mode.
 Downloads are stored in original quality on your device.</p>
 
@@ -87,22 +93,45 @@ Downloads are stored in original quality on your device.</p>
 <p>Lyrics come from your server. Plex provides them with Plex Pass, Jellyfin needs
 a lyrics plugin or embedded lyric files, and Subsonic servers need lyrics support
 (Navidrome reads embedded lyrics). If your server has them, Striae shows them —
-synced when available.</p>
+synced when available. For music on an Android device, put a <code>.lrc</code>
+(or <code>.txt</code>) file with the same name next to the song — for example
+<code>01 - Song.flac</code> and <code>01 - Song.lrc</code> — in a folder you've
+selected with <em>Select SD Card / Custom Folder</em>.</p>
 
 <h3>What is loudness leveling?</h3>
 <p>It evens out volume differences between tracks using your server's audio
-analysis. It's available on Plex with Plex Pass and analysis enabled in your
-library settings.</p>
+analysis. It's available on iPhone and iPad, with Plex Pass and analysis enabled
+in your library settings.</p>
 
 <h3>How does the Apple Watch app work?</h3>
 <p>The watch app controls playback on your iPhone — play/pause, skip, and volume
 from your wrist. Keep the phone within Bluetooth or Wi-Fi range of the watch.</p>
 
-<h3>What's the AI playlist feature?</h3>
-<p>It's experimental. If you run an <a href="https://ollama.com" rel="noopener">Ollama</a>
-server on your own machine, you can connect it in Settings → AI and build
-playlists by describing what you want to hear. Results depend on the model you
-run. None of your data goes to any AI company — only to your own server.</p>
+<h3>Which folder should I pick on Android?</h3>
+<p>Pick the folder that contains your music — for example the <code>Music</code>
+folder on your SD card. Striae looks through every folder inside it. It reads the
+tags in your files (title, artist, album artist, album, track and disc numbers,
+year), and uses a <code>cover.jpg</code> / <code>folder.jpg</code> in an album's
+folder or the artwork embedded in the files. Untagged files are named from their
+folders, as in <code>Artist/Album/01 - Title.flac</code>.</p>
+
+<h3>My Android library is large — how long does the first scan take?</h3>
+<p>The first scan of a big folder takes a while, but you don't have to wait for
+it: albums appear within seconds and fill in while it runs. After that, Striae
+opens instantly and only re-reads files that were added or changed. If you add
+music while the app is open, use <em>Settings → Rescan for changes</em>.</p>
+
+<h3>What's Cover Flow?</h3>
+<p>On a phone, turn it sideways to flip through a 3D carousel of your albums. Tap
+an album to see its tracks and play them; turn the phone back to return to where
+you were.</p>
+
+<h3>What are the AI features?</h3>
+<p>They're experimental. If you run an <a href="https://ollama.com" rel="noopener">Ollama</a>
+server on your own machine, you can connect it in Settings. On iPhone and iPad you
+can build playlists by describing what you want to hear; on Android you get a
+short note about the song that's playing. Results depend on the model you run.
+None of your data goes to any AI company — only to your own server.</p>
 
 <h3>Does Striae collect any of my data?</h3>
 <p>No. No analytics, no ads, no tracking. See the
@@ -112,11 +141,14 @@ run. None of your data goes to any AI company — only to your own server.</p>
 <p>
   If you're on the TestFlight beta, the quickest path is TestFlight's built-in
   feedback: take a screenshot in the app and share it via the TestFlight prompt,
-  or open TestFlight → Striae → Send Beta Feedback. Otherwise, email
+  or open TestFlight → Striae → Send Beta Feedback. If you're testing on Android
+  through Google Play, you can send private feedback from Striae's page in the
+  Play Store. Otherwise, email
   <a href="mailto:rookie_skid.1s@icloud.com">rookie_skid.1s@icloud.com</a>.
 </p>
-<p>The most useful reports include: your server type and version, what you tapped,
-what you expected, and what happened instead.</p>
+<p>The most useful reports include: your device (iPhone, iPad, or which Android
+device), your server type and version (or "Local Device"), what you tapped, what
+you expected, and what happened instead.</p>
 
 <footer>
   <p>Striae · <a href="privacy.html">Privacy Policy</a></p>

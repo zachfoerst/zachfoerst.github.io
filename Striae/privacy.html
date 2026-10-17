@@ -36,7 +36,7 @@
 <body>
 
 <h1>Striae Privacy Policy</h1>
-<p class="updated">Last updated: July 5, 2026</p>
+<p class="updated">Last updated: October 17, 2026</p>
 
 <div class="tldr">
   The short version: Striae collects nothing. There are no accounts with us, no
@@ -46,9 +46,10 @@
 
 <h2>Who we are</h2>
 <p>
-  Striae is a music player app for iOS, iPadOS, and Apple Watch that streams music
-  from media servers you own or control — Plex, Jellyfin, and Subsonic-compatible
-  servers. It is developed independently and operates no backend services of its own.
+  Striae is a music player app for iOS, iPadOS, Apple Watch, and Android that plays
+  music from media servers you own or control — Plex, Jellyfin, and
+  Subsonic-compatible servers — and, on Android, music stored on your device. It is
+  developed independently and operates no backend services of its own.
 </p>
 
 <h2>What we collect</h2>
@@ -64,10 +65,16 @@
 </p>
 <ul>
   <li><strong>Server credentials</strong> — your Jellyfin or Subsonic username and
-      password are stored in the iOS Keychain on your device, encrypted by the
-      operating system. Your Plex sign-in token is stored on your device. Credentials
-      are sent only to the server you configured, over the connection that server
+      password are stored on your device, encrypted by the operating system (the
+      Keychain on iOS; encrypted storage backed by the Android Keystore on Android).
+      Your Plex sign-in token is stored on your device the same way. Credentials are
+      sent only to the server you configured, over the connection that server
       provides.</li>
+  <li><strong>Music on your device (Android)</strong> — if you choose "Local
+      Device," Striae reads the audio files in the folder you pick (or Android's
+      media library) to build your library. The resulting index of titles, artists,
+      albums, and cover art is stored only in the app's private storage on your
+      device. Your files are never uploaded or modified.</li>
   <li><strong>Listening history and statistics</strong> — your play history, activity
       rings, and recaps are computed and stored entirely on your device. They are
       never uploaded anywhere by Striae.</li>
@@ -98,9 +105,10 @@
       policy</a>. Striae itself stores only the resulting access token, on your
       device.</li>
   <li><strong>Your Ollama server (optional)</strong> — if you connect the
-      experimental AI playlist feature to a self-hosted Ollama server, your playlist
-      prompts and a summary of your library catalog are sent to that server. You
-      operate it; nothing is shared with the developer or any AI provider.</li>
+      experimental AI features to a self-hosted Ollama server, your playlist prompts
+      and a summary of your library catalog (on iOS), or the title and artist of the
+      song you're playing (on Android), are sent to that server. You operate it;
+      nothing is shared with the developer or any AI provider.</li>
   <li><strong>Apple system services</strong> — features like Siri playback requests
       and on-device lyric translation are provided by Apple's frameworks on your
       device. Translation may download language models from Apple. These are governed
