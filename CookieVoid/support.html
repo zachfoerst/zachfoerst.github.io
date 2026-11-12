@@ -37,6 +37,13 @@
   }
   .app-header h1 { font-size: 1.8rem; color: #e8c547; letter-spacing: 2px; }
   .app-header p { font-family: 'Courier New', monospace; font-size: 0.7rem; color: #555566; letter-spacing: 2px; margin-top: 4px; }
+  .updated {
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: #555566;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+  }
   h2 {
     font-size: 0.75rem;
     color: #e8c547;
@@ -47,19 +54,18 @@
     padding-bottom: 8px;
     border-bottom: 1px solid #1e1e2e;
   }
-  p { color: #888899; margin-bottom: 16px; font-size: 0.95rem; }
-  .contact-box {
-    background: #111118;
-    border: 1px solid #1e1e2e;
-    border-radius: 8px;
-    padding: 20px 24px;
-    margin: 16px 0;
-  }
-  .contact-box a { color: #e8c547; text-decoration: none; }
-  .contact-box a:hover { text-decoration: underline; }
-  .faq-item { margin-bottom: 28px; }
-  .faq-item strong { color: #dddddd; display: block; margin-bottom: 6px; font-size: 0.95rem; }
-  .faq-item p { margin-bottom: 0; }
+  h3, summary { color: #dddddd; font-size: 0.95rem; font-weight: bold; margin: 28px 0 6px; }
+  details { margin-bottom: 16px; }
+  summary { cursor: pointer; margin-top: 20px; }
+  p, li { color: #888899; font-size: 0.95rem; }
+  p { margin-bottom: 16px; }
+  ul { margin: 0 0 16px 22px; }
+  li { margin-bottom: 8px; }
+  strong { color: #dddddd; }
+  p > strong:first-child { display: block; margin-bottom: 6px; }
+  a { color: #e8c547; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { font-family: 'Courier New', monospace; font-size: 0.85rem; color: #c8c8d4; }
   footer {
     margin-top: 60px;
     padding-top: 20px;
@@ -85,58 +91,42 @@
     <div class="app-icon">🍪</div>
     <div>
       <h1>Cookie Void</h1>
-      <p>Support · Version 1.1</p>
+      <p>Support</p>
     </div>
   </div>
+  <p class="updated">Cookie Void for iPhone and iPad</p>
 
   <h2>Contact</h2>
-  <p>For questions, bugs, or feedback, reach out directly:</p>
-  <div class="contact-box">
-    📧 <a href="mailto:rookie_skid.1s@icloud.com">rookie_skid.1s@icloud.com</a>
-  </div>
-  <p>We typically respond within 1–2 business days.</p>
+  <p>Questions, bugs or purchase problems: email <a href="mailto:rookie_skid.1s@icloud.com">rookie_skid.1s@icloud.com</a>. Please include your device model, iOS version and the app version (shown in Settings &gt; About inside the game).</p>
 
-  <h2>Frequently Asked Questions</h2>
+  <h2>Common questions</h2>
 
-  <div class="faq-item">
-    <strong>My progress disappeared after reinstalling.</strong>
-    <p>Progress is saved locally on your device. Deleting and reinstalling the app will erase your save data. iCloud sync is planned for a future update.</p>
-  </div>
+  <details><summary>I bought something and it didn't show up.</summary>
+  <p>Open the Store in the game and tap <strong>Restore Purchases</strong>. Remove Ads, Extended Offline and Production Bonus are permanent and restore on any device signed in to the same Apple Account. Cookie packs, boosts and Prestige Tokens are one-time items and can't be restored once they've been used.</p></details>
 
-  <div class="faq-item">
-    <strong>Ads aren't showing.</strong>
-    <p>Ads require an active internet connection and may not always be available depending on your region. Try closing and reopening the app.</p>
-  </div>
+  <details><summary>How do I get a refund?</summary>
+  <p>Purchases are handled by Apple. You can request a refund at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p></details>
 
-  <div class="faq-item">
-    <strong>I purchased Remove Ads but ads are still showing.</strong>
-    <p>Open the in-game store (bag icon) and tap Restore Purchases. This will reactivate your purchase.</p>
-  </div>
+  <details><summary>Will I lose my progress if I delete the app?</summary>
+  <p>Yes. Your progress is saved only on your device, so deleting the app erases it. It is not synced between devices. Permanent purchases can still be restored.</p></details>
 
-  <div class="faq-item">
-    <strong>I purchased the Starter Pack but didn't receive it.</strong>
-    <p>Tap Restore Purchases in the in-game store. If the issue persists, contact us at the email above.</p>
-  </div>
+  <details><summary>How do offline earnings work?</summary>
+  <p>Your buildings keep baking while the app is closed, for up to 6 hours. The Extended Offline purchase raises the cap to 9 hours. The Auto Collector item collects them for you when you open the game.</p></details>
 
-  <div class="faq-item">
-    <strong>The leaderboard isn't showing my score.</strong>
-    <p>Make sure you're signed into Game Center in your iPhone Settings. Scores submit automatically as you play.</p>
-  </div>
+  <details><summary>What does prestige do?</summary>
+  <p>Once a run reaches the prestige goal you can reset it. Each prestige level adds a permanent +25% to all cookies and gives you Prestige Tokens to spend in the Prestige Shop.</p></details>
 
-  <div class="faq-item">
-    <strong>How does offline earnings work?</strong>
-    <p>Your buildings keep producing cookies while the app is closed, up to a maximum of 8 hours. When you reopen the app, a screen shows how many cookies you earned while away.</p>
-  </div>
+  <details><summary>How do I turn off ads?</summary>
+  <p>Buy <strong>Remove Ads</strong> in the Store to turn off banner and interstitial ads. The rewarded ad for a 2x boost stays available but only plays when you choose it.</p></details>
 
-  <div class="faq-item">
-    <strong>What is the Prestige system?</strong>
-    <p>Once you've baked 1,000,000 total cookies, a Prestige button appears. Prestiging resets your cookies and upgrades but grants a permanent +25% production bonus. Each prestige requires 10× more total cookies than the last.</p>
-  </div>
+  <details><summary>How do I stop notifications?</summary>
+  <p>Go to the iOS Settings app &gt; Notifications &gt; Cookie Void. The game only sends reminders about offline earnings.</p></details>
 
-  <div class="faq-item">
-    <strong>How do I contact Apple about a billing issue?</strong>
-    <p>Visit <a href="https://reportaproblem.apple.com" style="color:#e8c547;">reportaproblem.apple.com</a> for any billing or purchase disputes.</p>
-  </div>
+  <details><summary>Why isn't my score on the leaderboard?</summary>
+  <p>Make sure you're signed in to Game Center in the iOS Settings app. The leaderboard ranks lifetime cookies baked.</p></details>
+
+  <details><summary>How do I start over?</summary>
+  <p>In the game, open Settings &gt; Data &gt; Reset All Progress. This can't be undone.</p></details>
 
   <footer>
     <span>© 2026 Zachary Foerst</span>

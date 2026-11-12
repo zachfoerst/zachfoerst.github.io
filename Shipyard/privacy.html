@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shipyard — Privacy Policy</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0a0a0f;
+    color: #c8c8d4;
+    font-family: 'Georgia', serif;
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 680px; margin: 0 auto; }
+  .back {
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: #555566;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  .back:hover { color: #e8c547; }
+  .app-header { display: flex; align-items: center; gap: 20px; margin-bottom: 40px; }
+  .app-icon {
+    width: 72px; height: 72px;
+    background: #1a1508;
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 36px;
+    border: 1px solid #e8c547;
+    flex-shrink: 0;
+  }
+  .app-header h1 { font-size: 1.8rem; color: #e8c547; letter-spacing: 2px; }
+  .app-header p { font-family: 'Courier New', monospace; font-size: 0.7rem; color: #555566; letter-spacing: 2px; margin-top: 4px; }
+  .updated {
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: #555566;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 0.75rem;
+    color: #e8c547;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1e1e2e;
+  }
+  h3, summary { color: #dddddd; font-size: 0.95rem; font-weight: bold; margin: 28px 0 6px; }
+  details { margin-bottom: 16px; }
+  summary { cursor: pointer; margin-top: 20px; }
+  p, li { color: #888899; font-size: 0.95rem; }
+  p { margin-bottom: 16px; }
+  ul { margin: 0 0 16px 22px; }
+  li { margin-bottom: 8px; }
+  strong { color: #dddddd; }
+  p > strong:first-child { display: block; margin-bottom: 6px; }
+  a { color: #e8c547; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { font-family: 'Courier New', monospace; font-size: 0.85rem; color: #c8c8d4; }
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #1e1e2e;
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    color: #333344;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  footer a { color: #555566; text-decoration: none; }
+  footer a:hover { color: #e8c547; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="/" class="back">← Back</a>
+
+  <div class="app-header">
+    <div class="app-icon">⚓</div>
+    <div>
+      <h1>Shipyard</h1>
+      <p>Privacy Policy</p>
+    </div>
+  </div>
+  <p class="updated">Effective November 12, 2026</p>
+
+  <p>Shipyard is built to keep your data on your device. This policy covers the Shipyard apps for iPhone and desktop.</p>
+  <h2>The short version</h2>
+  <ul>
+  <li>Shipyard has no account system, no server and no analytics.</li>
+  <li>The developer of Shipyard never receives your data, your tokens or your keys.</li>
+  <li>Shipyard only connects to GitHub and to Apple's App Store Connect, directly from your device, and only if you set those connections up.</li>
+  </ul>
+  <h2>What Shipyard stores, and where</h2>
+  <p><strong>On your device, in a local database:</strong> the apps, boards, cards, labels and checklists you create; data Shipyard has fetched from GitHub and App Store Connect (cached so it works offline); and non-secret identifiers such as your App Store Connect Issuer ID and Key ID.</p>
+  <p><strong>In your device's keychain:</strong> your GitHub personal access token and your App Store Connect private key (<code>.p8</code>). They are never written to the database, to files or to logs, and the private key is never shown again after you enter it.</p>
+  <p>Your device's own backups (for example iCloud or computer backups) may include this data, as they do for any app.</p>
+  <h2>What leaves your device</h2>
+  <p>Only requests you set up, sent straight from your device:</p>
+  <ul>
+  <li><strong>GitHub</strong> (<code>api.github.com</code>): read-only requests for your repositories, issues, pull requests, commits, releases and checks, authenticated with the token you created. GitHub handles these requests under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</li>
+  <li><strong>Apple App Store Connect</strong> (<code>api.appstoreconnect.apple.com</code>): read-only requests for your apps, builds, TestFlight, versions and ratings, authenticated with a short-lived token that Shipyard signs on your device. Your private key itself is never sent. Apple handles these requests under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</li>
+  </ul>
+  <p>Shipyard sends nothing to any other server. It contains no advertising, analytics, tracking or crash-reporting code, and it doesn't track you across apps or websites.</p>
+  <h2>Exports</h2>
+  <p>If you use Export, Shipyard writes a JSON file to a location you choose. It contains your apps, boards, cards, labels, checklists and App Store Connect Issuer and Key IDs. It never contains your tokens, private keys or cached data. Keep export files private, since they contain your plans.</p>
+  <h2>Deleting your data</h2>
+  <ul>
+  <li>Remove your GitHub token or App Store Connect key from inside Shipyard at any time; it's deleted from the keychain.</li>
+  <li>Deleting the app deletes its database. On iPhone, the system keychain can keep items after an app is deleted, so remove your token and key in Shipyard first if you want them gone from the device. You can also revoke the token on GitHub and the key in App Store Connect.</li>
+  </ul>
+  <h2>Children</h2>
+  <p>Shipyard is a tool for software developers and isn't directed at children.</p>
+  <h2>Changes</h2>
+  <p>If Shipyard ever starts sending data anywhere new, this policy will be updated before that version is released, and the date at the top will change.</p>
+  <h2>Contact</h2>
+  <p>Questions about privacy: <a href="mailto:rookie_skid.1s@icloud.com">rookie_skid.1s@icloud.com</a></p>
+
+  <footer>
+    <span>© 2026 Zachary Foerst</span>
+    <div style="display:flex;gap:20px;">
+      <a href="/Shipyard/support.html">Support</a>
+      <a href="/">All Apps</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

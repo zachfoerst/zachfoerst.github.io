@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shipyard — Support</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0a0a0f;
+    color: #c8c8d4;
+    font-family: 'Georgia', serif;
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+  .container { max-width: 680px; margin: 0 auto; }
+  .back {
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: #555566;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  .back:hover { color: #e8c547; }
+  .app-header { display: flex; align-items: center; gap: 20px; margin-bottom: 40px; }
+  .app-icon {
+    width: 72px; height: 72px;
+    background: #1a1508;
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 36px;
+    border: 1px solid #e8c547;
+    flex-shrink: 0;
+  }
+  .app-header h1 { font-size: 1.8rem; color: #e8c547; letter-spacing: 2px; }
+  .app-header p { font-family: 'Courier New', monospace; font-size: 0.7rem; color: #555566; letter-spacing: 2px; margin-top: 4px; }
+  .updated {
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: #555566;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 0.75rem;
+    color: #e8c547;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1e1e2e;
+  }
+  h3, summary { color: #dddddd; font-size: 0.95rem; font-weight: bold; margin: 28px 0 6px; }
+  details { margin-bottom: 16px; }
+  summary { cursor: pointer; margin-top: 20px; }
+  p, li { color: #888899; font-size: 0.95rem; }
+  p { margin-bottom: 16px; }
+  ul { margin: 0 0 16px 22px; }
+  li { margin-bottom: 8px; }
+  strong { color: #dddddd; }
+  p > strong:first-child { display: block; margin-bottom: 6px; }
+  a { color: #e8c547; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { font-family: 'Courier New', monospace; font-size: 0.85rem; color: #c8c8d4; }
+  footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #1e1e2e;
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    color: #333344;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  footer a { color: #555566; text-decoration: none; }
+  footer a:hover { color: #e8c547; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="/" class="back">← Back</a>
+
+  <div class="app-header">
+    <div class="app-icon">⚓</div>
+    <div>
+      <h1>Shipyard</h1>
+      <p>Support</p>
+    </div>
+  </div>
+
+  <p>Need help with Shipyard, found a bug, or have an idea? Email <a href="mailto:rookie_skid.1s@icloud.com">rookie_skid.1s@icloud.com</a> and include your device, its OS version and the Shipyard version (in Settings).</p>
+  <h2>Common questions</h2>
+  <p><strong>Do I need an account?</strong>
+  No. Shipyard has no account system. You can skip GitHub on the first screen and add apps by hand.</p>
+  <p><strong>What GitHub token should I create?</strong>
+  A fine-grained personal access token from GitHub's settings (Developer settings &gt; Personal access tokens &gt; Fine-grained tokens), limited to the repositories you want in Shipyard, with <strong>read-only</strong> access to Contents, Issues, Pull requests and Metadata. Add read-only Checks and Commit statuses if you want "In Review" to require passing CI. Shipyard never writes to GitHub.</p>
+  <p><strong>How do I connect App Store Connect?</strong>
+  In App Store Connect, go to Users and Access &gt; Integrations &gt; App Store Connect API and create a key; the App Manager role is enough. In Shipyard, link an app's store listing and paste the Issuer ID, Key ID and the contents of the <code>.p8</code> file. Shipyard only reads.</p>
+  <p><strong>Why isn't a pull request moving its card?</strong>
+  Cards follow the pull request's state: draft goes to Building, open to Planning, a <code>testing</code> label to Testing, approved with passing checks to In Review, merged to Live, closed without merging to Parked. If you drag a card yourself, Shipyard leaves it where you put it until the pull request changes again.</p>
+  <p><strong>I see an "offline", "expired" or "rate-limited" banner.</strong>
+  Shipyard keeps showing your cached data. "Expired" or "revoked" means the token or key needs replacing from the menu; "rate-limited" clears on its own once GitHub's limit resets.</p>
+  <p><strong>Do my iPhone and desktop sync?</strong>
+  Not yet. Each device keeps its own data. You can move boards between devices with Export and Import in Settings.</p>
+  <p><strong>Where is my data?</strong>
+  On your device only. See the <a href="/Shipyard/privacy.html">privacy policy</a>.</p>
+  <h2>Security issues</h2>
+  <p>Please report security problems privately to <a href="mailto:rookie_skid.1s@icloud.com">rookie_skid.1s@icloud.com</a> rather than publicly.</p>
+
+  <footer>
+    <span>© 2026 Zachary Foerst</span>
+    <div style="display:flex;gap:20px;">
+      <a href="/Shipyard/privacy.html">Privacy Policy</a>
+      <a href="/">All Apps</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
